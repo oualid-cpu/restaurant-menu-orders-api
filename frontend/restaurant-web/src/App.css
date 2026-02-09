@@ -1,0 +1,263 @@
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  background: white;
+  border-bottom: 1px solid #1118271a;
+  padding: 10px 24px;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.nav button {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid #1118272a;
+  background: transparent;
+  color: #111827;
+  cursor: pointer;
+}
+
+.nav button.navActive {
+  background: #111827;
+  color: white;
+}
+
+.header h1 {
+  margin: 0 0 6px;
+}
+
+.sub {
+  margin: 0 0 18px;
+  opacity: 0.8;
+}
+
+.card {
+  background: #1118270a;
+  border: 1px solid #1118271a;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.form .row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+}
+
+input {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #1118272a;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+button {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #1118272a;
+  background: #111827;
+  color: white;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: transparent;
+  color: #111827;
+}
+
+.error {
+  color: #b91c1c;
+  white-space: pre-wrap;
+}
+
+.successBox {
+  border: 1px solid #065f462a;
+  background: #065f460a;
+  padding: 12px;
+  border-radius: 12px;
+  margin: 12px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.menuItem {
+  border: 1px solid #1118271a;
+  border-radius: 12px;
+  padding: 12px;
+  background: white;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.price {
+  opacity: 0.9;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 13px;
+  opacity: 0.85;
+  margin-bottom: 10px;
+}
+
+.badge {
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #1118270f;
+}
+
+.ok {
+  color: #065f46;
+}
+.no {
+  color: #991b1b;
+}
+
+.desc {
+  margin: 0;
+  opacity: 0.85;
+  font-size: 14px;
+}
+
+/* ---------- Orders page styles ---------- */
+.ordersLayout {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.listBtn {
+  width: 100%;
+  text-align: left;
+  background: white;
+  color: #111827;
+}
+
+.listBtn.active {
+  background: #111827;
+  color: white;
+}
+
+.listRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.small {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.detailsBox {
+  background: white;
+  border: 1px solid #1118271a;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.detailsHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.total {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.table {
+  border-top: 1px solid #1118271a;
+  margin-top: 10px;
+}
+
+.thead,
+.trow {
+  display: grid;
+  grid-template-columns: 1fr 70px 90px 90px;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.thead {
+  font-weight: 700;
+  opacity: 0.8;
+  border-bottom: 1px solid #1118271a;
+}
+
+.trow {
+  border-bottom: 1px solid #11182710;
+}
+
+.right {
+  text-align: right;
+}
+
+/* responsive */
+@media (max-width: 1000px) {
+  .ordersLayout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .form .row {
+    grid-template-columns: 1fr;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
