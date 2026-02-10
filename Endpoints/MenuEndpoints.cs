@@ -4,6 +4,7 @@ using RestaurantApi.Data;
 using RestaurantApi.DTOs;
 using RestaurantApi.Models;
 using RestaurantApi.Validation;
+using Microsoft.AspNetCore.OpenApi;
 
 namespace RestaurantApi.Endpoints;
 
@@ -12,8 +13,7 @@ public static class MenuEndpoints
     public static RouteGroupBuilder MapMenuEndpoints(this IEndpointRouteBuilder app)
     {
         var group = app.MapGroup("/menu")
-            .WithTags("Menu")
-            .WithOpenApi();
+.WithTags("Menu").WithOpenApi();
 
         // GET /menu?q=...&category=...&minPrice=...&maxPrice=...
         group.MapGet("/", async (
@@ -152,6 +152,17 @@ public static class MenuEndpoints
             await db.SaveChangesAsync();
 
             return Results.NoContent();
+            // var resultDto = new MenuItemDto(
+            //     item.Id,
+            //     item.Name,
+            //     item.Category,
+            //     item.Description,
+            //     item.Price,
+            //     item.IsAvailable
+            // );
+
+            // return Results.Ok(resultDto);
+
         })
         .WithName("UpdateMenuItem")
         .Produces(StatusCodes.Status204NoContent)

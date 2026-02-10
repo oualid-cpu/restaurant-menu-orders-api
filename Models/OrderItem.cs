@@ -17,7 +17,7 @@ public class OrderItem
     [Range(1, 1000)]
     public int Quantity { get; set; }
 
-    // Snapshot price at order time (important for real apps)
+    
     [Range(0.01, 100000)]
     public decimal UnitPrice { get; set; }
 
